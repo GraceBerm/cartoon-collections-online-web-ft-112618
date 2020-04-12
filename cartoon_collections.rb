@@ -26,7 +26,18 @@ end
 def find_the_cheese(array)
   cheese_types = ["cheddar", "gouda", "camembert"]
   # if array includes any of the cheese types then return true check array, check cheese types, coompare
-  array.detect do |element|
-    cheese_types.include?(element)
+  array.each do |element|
+    if cheese_types.include?(element)
+      return element
+    end
   end
+  return nil
 end
+
+# def find_the_cheese(array)
+#   cheese_types = ["cheddar", "gouda", "camembert"]
+#   # if array includes any of the cheese types then return true check array, check cheese types, coompare
+#   array.detect do |element|
+#     cheese_types.include?(element)
+#   end
+# end
