@@ -24,8 +24,8 @@ def find_the_cheese(array)
   # if array includes any of the cheese types then return true check array, check cheese types, coompare
   array.each do |element|
     if cheese_types.include?(element)
-      return true
+      return element
     end
   end
-  return false
+  return nil
 end
